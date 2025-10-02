@@ -2,6 +2,7 @@ const { spec, request } = require('pactum');
 const { faker } = require('@faker-js/faker');
 
 const BASE_URL = 'http://localhost:3000';
+const AUTH_TOKEN = 'default_token';
 
 describe('API tests to get book data', () => {
   it('Get all books', async () => {
@@ -59,5 +60,6 @@ describe('API test for authenticated call', () => {
       .withBody(requestBody)
       .expectStatus(200);
   });
+  console.log(AUTH_TOKEN);
 
 });
