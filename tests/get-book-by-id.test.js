@@ -10,9 +10,11 @@ describe('API tests to get book data', () => {
     // console.log('before, one time action!!!!');
   });
 
-  it('Get books by id', async () => {
-   
-    await spec().get(`${BASE_URL}/books/1`).expectStatus(200).expectJsonSchema(getBookByIdSchema);
+  it('Get books by id with schema validation', async () => {
+    await spec()
+      .get(`${BASE_URL}/books/1`)
+      .expectStatus(200)
+      .expectJsonSchema(getBookByIdSchema);
   });
 
   it('Get books by id', async () => {

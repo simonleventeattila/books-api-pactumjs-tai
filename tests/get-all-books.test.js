@@ -13,8 +13,9 @@ describe('API tests to get book data', () => {
     // console.log('before, one time action!!!!');
   });
   it('Get all books', async () => {
-    await spec().get(`${BASE_URL}/books`).expectStatus(200).expectJsonSchema(getAllBooksSchema);
-    
+    await spec()
+      .get(`${BASE_URL}/books`)
+      .expectStatus(200)
+      .expectJsonSchema(getAllBooksSchema);
   });
-
 });

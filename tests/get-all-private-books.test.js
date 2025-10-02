@@ -17,7 +17,7 @@ describe('API tests to get all private books', () => {
   });
 
   it('Get all private books', async () => {
-    //const tokenId = await generateToken(BASE_URL);
+    
     await spec()
       .get(`${BASE_URL}/private/books`)
       .withHeaders('Authorization', `Bearer ${tokenId}`)
