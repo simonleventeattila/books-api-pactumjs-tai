@@ -59,5 +59,5 @@ describe('API test for authenticated call', () => {
       .withBody(requestBody)
       .expectStatus(200);
   });
-  console.log('asdasdas');
+
 });
