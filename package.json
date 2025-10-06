@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx mocha tests/*.test.js --timeout=10000",
+    "test": "npx mocha tests/*.test.js --timeout=10000 --reporter mochawesome",
     "format": "npx prettier --write ."
   },
   "keywords": [],
