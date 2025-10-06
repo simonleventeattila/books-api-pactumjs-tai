@@ -1,7 +1,7 @@
 const { spec, request } = require('pactum');
-
 const { faker } = require('@faker-js/faker');
 const { generateToken } = require('../lib/generate-token');
+const getAllPrivateBooksSchema = require('../data/response/get-all-private-books-schema.json');
 
 const BASE_URL = 'http://localhost:3000';
 
@@ -20,6 +20,7 @@ describe('API tests to get all private books', () => {
     await spec()
       .get(`${BASE_URL}/private/books`)
       .withHeaders('Authorization', `Bearer ${tokenId}`)
-      .expectStatus(200);
+      .expectStatus(200)
+      .expectJsonSchema(getAllPrivateBooksSchema);
   });
 });

@@ -1,7 +1,5 @@
 const { spec, request } = require('pactum');
 
-// const { spec } = require('pactum');
-// const { request } = require('pactum');
 const getAllBooksSchema = require('../data/response/get-all-books-schema.json');
 const { faker } = require('@faker-js/faker');
 
